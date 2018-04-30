@@ -1,0 +1,139 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+//Import GOV.UK Frontend
+@import "@govuk-frontend/all/all";
+
+// Patterns that aren't in Frontend
+@import 'patterns/check-your-answers';
+@import 'patterns/related-items';
+
+.code {
+  color: $govuk-text-colour;
+  background-color: $govuk-grey-4;
+
+  text-shadow: 0 1px $govuk-white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  border: 1px solid $govuk-border-colour;
+  padding: 4px 4px 2px;
+}
+
+
+// Local fixes to GOV.UK frontend
+
+.markdown hr {
+  @include govuk-responsive-margin($govuk-spacing-responsive-6, "top");
+  @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+}
+
+.govuk-list + .govuk-heading-l,
+.govuk-list + .govuk-heading-m,
+.govuk-list + .govuk-heading-s,
+.govuk-prose-scope ul + h2,
+.govuk-prose-scope ul + h3,
+.govuk-prose-scope ul + h4,
+.govuk-prose-scope pre + h2,
+.govuk-prose-scope pre + h3,
+.govuk-prose-scope pre + h4 {
+  @include govuk-responsive-padding($govuk-spacing-responsive-4, "top");
+}
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+// @import 'patterns/check-your-answers';
+// @import 'patterns/task-list';
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+$baseline: 30px;
+
+#global-header,
+.govuk-c-back-link,
+#footer {
+  display: none;
+}
+
+h2.answer {
+  color: #E40037;
+  text-align: right;
+  margin: $baseline*2 0;
+}
+
+form {
+  margin-top: $baseline*3;
+}
+
+#global-header-bar {
+  background-color: #E40037;
+}
+
+a:link,
+a:visited {
+  color: #000000;
+}
+
+a:hover {
+  color: #E40037;
+}
+
+.govuk-c-radios__item {
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 0;
+  margin-right: $baseline*0.5;
+}
+
+.govuk-c-radios__item input, 
+.govuk-c-radios__item label:before {
+  display: none;
+}
+
+.govuk-c-radios {
+  margin-left: $baseline;
+}
+
+html {
+  background-color: #ffffff;
+}
+
+h1.govuk-heading-l {
+  position: relative;
+  padding: 30px;
+  background: #eeeeee;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 75%;
+  margin-left: $baseline;
+}
+
+h1.govuk-heading-l:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #eeeeee;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -30px;
+  top: 27px;
+}
