@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-o-width-container">
+
+  <a class="govuk-c-back-link" href="/url/of/previous/page">Back</a>
+
+  <main role="main" class="govuk-o-main-wrapper">
+
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item">
+
+        <form class="form" action="/05" method="post">
+
+          <div class="govuk-o-form-group">
+            <fieldset class="govuk-c-fieldset">
+              <legend class="govuk-c-fieldset__legend">
+                <p class="aida">{{ a_1 }}</p>
+                <span class="govuk-c-fieldset__hint">For example, 31 3 2018</span>
+              </legend>
+              <div class="govuk-c-date-input">
+                <div class="govuk-c-date-input__item govuk-c-date-input__item--day">
+                  <div class="govuk-o-form-group"><label class="govuk-c-label govuk-c-date-input__label" for="day">
+                  Day
+                </label>
+                <input class="govuk-c-input govuk-c-date-input__input" id="day" name="day" type="number" pattern="[0-9]*">
+                </div>
+                </div>
+                <div class="govuk-c-date-input__item govuk-c-date-input__item--month">
+                  <div class="govuk-o-form-group"><label class="govuk-c-label govuk-c-date-input__label" for="month">
+                  Month
+                </label>
+                <input class="govuk-c-input govuk-c-date-input__input" id="month" name="month" type="number" pattern="[0-9]*">
+                </div>
+                </div>
+                <div class="govuk-c-date-input__item govuk-c-date-input__item--year">
+                  <div class="govuk-o-form-group"><label class="govuk-c-label govuk-c-date-input__label" for="year">
+                  Year
+                </label>
+                <input class="govuk-c-input govuk-c-date-input__input" id="year" name="year" type="number" pattern="[0-9]*">
+                </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <input class="govuk-c-button" type="submit" value="{{ u_1 }}">
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

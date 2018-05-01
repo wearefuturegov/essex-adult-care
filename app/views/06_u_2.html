@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-o-width-container">
+
+  <a class="govuk-c-back-link" href="/url/of/previous/page">Back</a>
+
+  <main role="main" class="govuk-o-main-wrapper">
+
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item">
+
+        <form class="form" action="/06_u_2" method="post">
+
+          <div class="govuk-o-form-group">
+            <fieldset class="govuk-c-fieldset">
+              <legend class="govuk-c-fieldset__legend">
+                <p class="aida">{{ a_1 }}</p>
+              </legend>
+          </fieldset>
+          </div>
+
+          <!-- <input class="govuk-c-button" type="submit" value="Continue"> -->
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

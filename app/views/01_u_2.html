@@ -15,24 +15,25 @@
     <div class="govuk-o-grid">
       <div class="govuk-o-grid__item">
 
-        <form class="form" action="/someone_else" method="post">
+        <form class="form" action="/01_u_2" method="post">
 
           <div class="govuk-o-form-group">
             <fieldset class="govuk-c-fieldset">
               <legend class="govuk-c-fieldset__legend">
-                <h1 class="govuk-heading-l">{{ heading }}</h1>
-                <!-- <span class="govuk-c-label__hint">{{ hint }}</span> -->
+                <p class="aida">{{ a_1 }}</p>
+                <p class="aida">{{ a_2 }}</p>
+                <p class="aida">{{ a_3 }}</p>
               </legend>
-              <div class="govuk-o-form-group"><label class="govuk-c-label govuk-!-width-one-half" for="full-name">
-                {{ heading }}
-              </label>
-              <input class="govuk-c-input govuk-!-width-one-half" id="full-name" name="full-name" type="text">
+              <div class="govuk-c-radios">
+                <div class="govuk-c-radios__item">
+                  <input class="govuk-c-radios__input" id="option-1" name="option" type="submit" value="u_1">
+                  <label class="govuk-c-label govuk-c-radios__label" for="option-1">
+                  {{ u_1 }}
+                </label>
+                </div>
               </div>
           </fieldset>
           </div>
-
-          <input class="govuk-c-button" type="submit" value="Continue">
-
         </form>
 
       </div>
