@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-o-width-container">
+
+  <a class="govuk-c-back-link" href="/url/of/previous/page">Back</a>
+
+  <main role="main" class="govuk-o-main-wrapper">
+
+    <div class="govuk-o-grid">
+      <div class="govuk-o-grid__item">
+
+        <form class="form" action="/07" method="post">
+
+          <div class="govuk-o-form-group">
+            <fieldset class="govuk-c-fieldset">
+              <legend class="govuk-c-fieldset__legend">
+                <p class="aida">{{ a_1 }}</p>
+              </legend>
+          </fieldset>
+          </div>
+          <div class="govuk-c-radios">
+            <div class="govuk-c-radios__item">
+              <input class="govuk-c-radios__input" id="option-1" name="option" type="submit" value="u_1">
+              <label class="govuk-c-label govuk-c-radios__label" for="option-1">
+              {{ u_1 }}
+            </label>
+            </div>
+            <div class="govuk-c-radios__item">
+              <input class="govuk-c-radios__input" id="option-2" name="option" type="submit" value="u_2">
+              <label class="govuk-c-label govuk-c-radios__label" for="option-2">
+              {{ u_2 }}
+            </label>
+            </div>
+            <div class="govuk-c-radios__item">
+              <input class="govuk-c-radios__input" id="option-3" name="option" type="submit" value="u_3">
+              <label class="govuk-c-label govuk-c-radios__label" for="option-3">
+              {{ u_3 }}
+            </label>
+            </div>
+            <div class="govuk-c-radios__item">
+              <input class="govuk-c-radios__input" id="option-4" name="option" type="submit" value="u_4">
+              <label class="govuk-c-label govuk-c-radios__label" for="option-4">
+              {{ u_4 }}
+            </label>
+            </div>
+            <div class="govuk-c-radios__item">
+              <input class="govuk-c-radios__input" id="option-5" name="option" type="submit" value="u_5">
+              <label class="govuk-c-label govuk-c-radios__label" for="option-5">
+              {{ u_5 }}
+            </label>
+            </div>
+          <!-- <input class="govuk-c-button" type="submit" value="Continue"> -->
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

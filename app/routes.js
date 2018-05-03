@@ -252,12 +252,58 @@ router.post('/05', function (req, res) {
   }
 })
 
-//////////
-
 router.get('/06_u_2', function (req, res) {
   res.render('06_u_2', 
     { 
       'a_1': "OK, I'll check in with you later by sending you a text message to your mobile."
+    }
+  )
+})
+
+router.get('/07', function (req, res) {
+  res.render('07', 
+    { 
+      'a_1': "What can I help you with today?",
+      'u_1': "Falling over",
+      'u_2': "Cleaning",
+      'u_3': "Feeling lonely",
+      'u_4': "Care costs",
+      'u_5': "I don't know"
+    }
+  )
+})
+
+router.post('/07', function (req, res) {
+  var options = req.body["option"]
+
+  if (options == 'u_1') {
+    res.redirect('08_u_1')
+  }
+  else if (options == 'u_2') {
+    res.redirect('08_u_2')
+  }
+  else if (options == 'u_3') {
+    res.redirect('08_u_3')
+  }
+  else if (options == 'u_4') {
+    res.redirect('08_u_4')
+  }
+  else {
+    res.redirect('08_u_5')
+  }
+})
+
+//////////
+
+router.get('/08_u_5', function (req, res) {
+  res.render('08_u_5', 
+    { 
+      'a_1': "It sounds like you may need to talk to someone to get more help than I can provide at this stage. You might want to consider these questions before talking with somebody:",
+      'a_2': "What kinds of things would you like to be able to do but now struggle with?",
+      'a_3': "What kinds of things would they like to be able to do but now struggle with?",
+      'a_4': "What is working well at the moment?",
+      'a_5': "What needs to change to make things easier?",
+      'a_6': "When you are ready to talk with someone, let me know."
     }
   )
 })
